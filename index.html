@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+        <style> body {padding: 0; margin: 0;} </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.2"> </script>
+        <script src="sketch.js"></script>
+        <script>
+        </script>
+    </head>
+    <body>
+    <div id="holder"></div>
+        
+    <select id="regressionList">
+        <option value="POLY">Polynomial</option>
+        <option value="EXP">Exponential</option>
+        <option value="COS">Trig</option>
+        <option value="INV">Inverse</option>
+    </select>    
+    <input type="button" onclick="changeRegression()" value="Change Regression" /><br/>
+    <input id="nTextBox" type="number">
+    <input type="button" onclick="changeN()" value="Change degree of polynomial"><br/>
+    <input id="rateBox" type="number">
+    <input type="button" onclick="changeRate()" value="Change learning rate"><br/>
+    <input type="button" onclick="clearPoints()" value="Remove data points"><br/>
+    <input type="button" onclick="fineGrain()" value="Stop seizures"><br/>
+    <p>Equation: <text id="equation"></text></p>
+    </body>
+</html>
